@@ -1,0 +1,192 @@
+
+**To Display popup googleSearch bar 
+
+1-After Create Google Acount ,Put All of this in Index.html.
+
+
+   
+<!-- GoogleSearch Section  -->
+    <script async src="https://cse.google.com/cse.js?cx=671aa4b5bacc64616">
+    </script>
+ 
+  <script>
+ (function() {   
+    var cx = '!!!!!!!!!!!!!!!!!!!';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=671aa4b5bacc64616'+ cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+})();
+
+ 
+window.onload = function(){
+ 
+  
+ 
+ 
+ 
+ 
+ document.getElementById('gsc-i-id1').value='Search With Athletix';
+
+ document.getElementById('gsc-i-id1').style.height = "40px";
+
+ document.getElementById('gsc-i-id1').style.color = "black";
+ document.getElementById('gsc-i-id1').style.background = "#ecedee";
+
+ // Clear PlaceHolder
+   
+
+ var inputElement = document.getElementById('gsc-i-id1');
+    if(inputElement) {
+        inputElement.onclick = function() {
+            inputElement.value = ''; // Set the value to 'Search' when clicked
+        };
+    } else {
+        console.error("Element with id 'gsc-i-id1' not found.");
+    }
+
+ 
+ 
+
+
+};
+
+ 
+
+ 
+</script>
+
+<!--End GoogleSearch Section  -->
+
+
+2-Put your style in Master.css or in Main css Style ok..
+
+
+
+         /* google search start */
+
+         body {
+          margin: 10;
+      }
+      .gsc-control-cse {
+          background-color: white !important;
+          border: 0 !important;
+          padding: 6px 8px 6px 10px !important;
+          margin: 0px;
+          border-radius: 2px;
+          overflow: hidden;
+      }
+      form.gsc-search-box,
+      table.gsc-search-box {
+          margin-bottom: 0 !important;
+      }
+      .gcse-search-box {
+          border: 0 !important;
+          background: #387deb !important;
+      }
+      .gcse-search-box-tools .gcse-search-box .gcse-input {
+          padding-right: 0 !important;
+      }
+      #gs_tti50 {
+        width: 100%;
+        background: #ECEDEE;
+        height: 50px;
+        padding-left: 20px;
+        border-radius: 5px;
+        border: 0;
+      }
+
+      
+ 
+      #gsc-i-id1 {
+          color: #000 !important;
+          text-indent: 0 !important;
+          font-size: 14px !important;
+          line-height: 1 !important;
+          background: none !important;
+      }
+      #gsc-i-id1::-webkit-input-placeholder {
+          color: #000 !important;
+      }
+      #gsc-i-id1::-as-input-placeholder {
+          color: #fff;
+      }
+      #gsc-i-id1::-moz-placeholder {
+          color: #fff;
+          opacity: 1;
+      }
+      #gsc-i-id1::-moz-placeholder {
+          color: #fff;
+          opacity: 1;
+      }
+      .gsib_b {
+          display: none !important;
+      }
+      .gsc-search-button -v2 {
+          padding: 7.5px !important;
+          margin-left: !important;
+          outline: none !important;
+          border: !important;
+          cursor: pointer;
+      }
+
+
+.gsc-search-box .gsc-input>input:focus,
+.gsc-input-box-focus {
+  border: 1px solid #4d90fe;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+  outline: none;
+}
+
+/* Search button */
+.gsc-search-button-v2 {
+  font-size: 0;
+  padding: 6px 27px;
+  width: auto;
+  vertical-align: middle;
+
+  border: 1px solid #666;
+  border-radius: 2px;
+
+  border-color: white;
+  background-color: red;
+  background-image: linear-gradient(top, #4d90fe, #4787ed);
+}
+
+
+ 
+
+.gsc-search-button-v2:hover {
+  border-color: white;
+  background-color: red;
+  background-image: linear-gradient(top, #4d90fe, #357ae8);
+}
+      .gsc-search-button-v2,gsc-search-button-v2: hover {
+          cursor: pointer;
+      }
+      .gsc-search-button-v2,gsc-search-button-v2: hover {
+          background-color: transparent !important;
+          background-image: none !important;
+      }
+      .gsc-search-button -v2:focus {
+          outline: none !important;
+          box-shadow: none !important;
+          background-color: transparent !important;
+          background-image: none !important;
+      }
+      .gsc-search-button -v2:focus {
+          outline: none !important;
+          box-shadow: none !important;
+      }
+         /* google search End*/
+
+
+
+
+3-then put div Id in Where you want display Searc bar ...in html..
+
+        <div     class="gcse-search">
+                       
+                       </div>
